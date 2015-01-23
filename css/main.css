@@ -1,0 +1,281 @@
+/*-----------------------------------
+Main Body
+-----------------------------------*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #3f3f58;
+}
+
+/*-----------------------------------
+Header
+-----------------------------------*/
+
+header {
+	background: #4569e8;
+	float: left;
+	width: 100%;
+	height: 50px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #646464;
+	box-shadow: 5px 0px 1px #646464;
+}
+
+nav {
+	float: right;
+	color: #fff;
+	text-align: center;
+	padding: 13px 0px 10px 0px;
+	margin: 0px 0px 20px 0px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px;
+	margin: 5px 10px;
+}
+
+/*-----------------------------------
+Wrapper
+-----------------------------------*/
+
+#wrapper {
+	max-width: 100%;
+}
+
+/*-----------------------------------
+Top
+-----------------------------------*/
+#top {
+	background: url("../img/glassesgirl.png") top left no-repeat #3f3f58;
+	width: 100%;
+	height: 540px;
+	box-shadow: 0px 5px 5px #333;
+}
+
+#intro {
+	padding-left: 10%;
+	padding-top: 10%;
+	max-width: 50%;
+}
+
+.mainLogo {
+	width: 100px;
+}
+
+.mainText {
+	color: #333;
+	font-family: 'Advent Pro', courier, sans-serif;
+	font-size: 4.7em;
+	padding-left: 15px;
+	margin-bottom: 50px;
+	vertical-align: top;
+
+}
+
+.subheader {
+	display: inline-block;
+	color: #555;
+	font-size: 1.6em;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.description {
+	display: block;
+	font-size: .9em;
+	font-color: #666;
+	margin-left: 40px;
+	font-style: italic;
+	max-width: 75%;
+}
+
+.signup, .signupbody, .button {
+	padding: 17px;
+	font-size: 1em;
+	border-width: 2px;
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+.signup, .button {
+	border-color: #4569e8;
+	color: #4569e8;
+	float: left;
+	margin-right: 50px;
+}
+
+.signupbody {
+	border-color: #d5d9db;
+	color: #d5d9db;
+	margin-bottom: 20px;
+}
+
+.signup:hover {
+	padding: 17px;
+	display: block;
+	font-size: 1em;
+	border-color: #4569e8;
+	border-width: 2px;
+	background-color: #4569e8;
+	color: #fff;
+	border-radius: 5px;
+	margin: auto;
+	margin-right: 50px;
+}
+
+/*-----------------------------------
+Content
+-----------------------------------*/
+
+/*-----------------------------------
+Capture, Connect and Grow
+-----------------------------------*/
+#ccg {
+	text-align: center;
+}
+
+#ccg ul {
+	list-style: none;
+	padding: 10px 0 30px 0;
+}
+
+#ccg li {
+	display: inline-block;
+	max-width: 25%;
+}
+
+.iconMain {
+	width: 150px;
+	padding: 30px 50px 10px 50px;
+}
+
+.captionTitle, .captionText {
+	margin: 2.5px 5px;
+	color: #d5d9db;
+}
+
+.captionTitle {
+	font-size: 1.4em;
+	display: block;
+	text-transform: uppercase;
+}
+
+.captionText {
+	font-size: .9em;
+	max-width: 50%;
+}
+
+.divider {
+	color: #333;
+	margin: 10px 0 0 0;
+	width: 100%;
+	box-shadow: 10px 0px 5px #333;
+}
+
+/*-----------------------------------
+Features
+-----------------------------------*/
+
+#features {
+	background-color: #d5d9db;
+	width: 100%;
+	height: 175px;
+}
+
+/*-----------------------------------
+Beta Sign Up Form
+-----------------------------------*/
+
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align:center;
+}
+
+#mc_embed_signup {
+	width: 400px;
+	height: 220px;
+	background: #eee;
+	position: relative;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 4px 4px 5px #333;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	padding: 10px;
+}
+
+#mc-embedded-subscribe-form label {
+	margin: 0 0 30px 0;
+	display: block;
+	padding: 20px 0 0 0;
+	font-size: .85em;
+}
+
+.formLogo {
+	float: left;
+	width: 75px;
+	padding: 0 15px 5px 25px;
+}
+
+#mce-EMAIL, #mc-embedded-subscribe {
+	float: right;
+	margin: 0 15px 15px 0;
+}
+
+#mce-EMAIL {
+	width: 250px;
+}
+
+.formCancel {
+	font-size: .7em;
+	color: #ff5353;
+	float: left;
+	padding: 5px;
+	text-decoration: none;
+	display: block;
+	margin: 45px 0 0 -85px
+}
+
+/*-----------------------------------
+Footer
+-----------------------------------*/
+
+footer {
+	background: #ececec;
+	border-color: #4569e8;
+	padding: 5px 0 0 0;
+	width: 100%;
+	height: 35px;
+	clear: both;
+	position: fixed;
+	bottom: 0px;
+}
+
+.small-logo-footer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	text-align: center;
+	width: 35px;
+	height: 35px;
+}

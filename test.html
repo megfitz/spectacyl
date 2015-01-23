@@ -1,0 +1,102 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Flot Examples</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/flot/jquery.flot.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" src="js/flot/jquery.flot.time.js"></script>
+</head>
+    <body>
+    <h1>Flot Examples</h1>
+
+    <div id="placeholder" style="width:600px;height:300px"></div>
+
+    <p>One of the goals of Flot is to support user interactions. Try
+    pointing and clicking on the points.</p>
+
+    <p id="hoverdata">Mouse hovers at
+    (<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></p>
+
+    <p>A tooltip is easy to build with a bit of jQuery code and the
+    data returned from the plot.</p>
+
+<script type="text/javascript">
+var $data = [[1406160000000, "698"], [1406246400000, "605"],[1406332800000, "646"], [1406419200000, "755"], [1406505600000, "658"], [1406592000000, "642"], [1406678400000, "615"], [1406764800000, "613"], [1406851200000, "466"], [1406937600000, "505"], [1407024000000, "607"], [1407110400000, "638"], [1407196800000, "579"], [1407283200000, "483"]]
+
+var $actData = [[1406160000000, "Facebook Ads", "Advertisement"], [1406592000000, "App Update", "Product Update"]]
+
+var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+$(function () {
+    // var sin = [], cos = [];
+    // for (var i = 0; i < 14; i += 0.5) {
+    //     sin.push([i, Math.sin(i)]);
+    //     cos.push([i, Math.cos(i)]);
+    // }
+
+    var plot = $.plot($("#placeholder"),
+           [ { data: $data } ], {
+               series: {
+                   lines: { show: true },
+                   points: { show: true }
+               },
+               xaxis: { mode: "time" },
+               grid: { hoverable: true, clickable: true },
+               //yaxis: { min: -1.2, max: 1.2 }
+             });
+
+    function showTooltip(x, y, contents) {
+        $('<div id="tooltip">' + contents + '</div>').css( {
+            position: 'absolute',
+            display: 'none',
+            top: y + 5,
+            left: x + 5,
+            border: '1px solid #fdd',
+            padding: '2px',
+            'background-color': '#058DC7',
+            opacity: 0.80
+        }).appendTo("body").fadeIn(200);
+    }
+    var previousPoint = null;
+    $("#placeholder").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(2));
+        $("#y").text(pos.y.toFixed(2));
+        var $date = new Date(pos.x)
+        
+            if (item) {
+                for (i in $actData) {
+                    if (pos.x === $actData[i][0]) {
+                        var actTitle = $actData[i][1];
+                        var actCat = $actData[i][2];
+                    } else {
+                        i = i + 1;
+                        // var actTitle = " ";
+                        // var actCat = " ";
+                        };
+                };
+
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                        y = item.datapoint[1].toFixed(2);
+                    
+                    showTooltip(item.pageX, item.pageY,
+                                $date.getDate() + " " + month[$date.getMonth()] + ", " + $date.getFullYear() + ": " + "<br>" + Math.floor(y) + " Registrations" + "<br>" + actTitle + " " + actCat);
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;            
+            }
+    });
+
+
+});
+</script>
+
+ </body>
+</html>

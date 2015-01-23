@@ -1,0 +1,282 @@
+/*-----------------------------------
+Main Body
+-----------------------------------*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #3f3f58;
+}
+
+/*-----------------------------------
+Header
+-----------------------------------*/
+
+header {
+	background: #4569e8;
+	float: left;
+	width: 100%;
+	height: 50px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #646464;
+}
+
+.small-logo, .small-logo-footer {
+	width: 35px;
+	height: 35px;
+}
+
+.small-logo {
+	float: left;
+	padding: 13px 10px 0px 10px;
+}
+
+.logo {
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Advent Pro', courier, sans-serif;
+	font-size: 1.3em;
+	float: left;
+}
+
+nav {
+	float: right;
+	color: #fff;
+	text-align: center;
+	padding: 0px 0px 10px 0px;
+	margin: 0px 0px 20px 0px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px;
+	margin: 5px 10px;
+}
+
+/*-----------------------------------
+Wrapper
+-----------------------------------*/
+
+#wrapper {
+	max-width: 100%;
+}
+
+#leftContent, #rightContent {
+	padding: 1% 1%;
+}
+
+
+/* BUTTONS */
+
+.submitButton, .postButton, #addNew, .submitDataButton {
+	padding: 7px;
+	display: inline-block;
+	font-size: 1em;
+	background-color: #4569e8;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+.submitButton, .postButton {
+	height: 35px;
+}
+
+.submitButton, .submitDataButton {
+	float: right;
+}
+
+#addNew  {
+	padding: 5px 15px 5px 15px;
+	font-size: 1.6em;
+}
+
+.submitDataButton {
+	font-size: .8em;
+	height: 30px;
+}
+
+/*-----------------------------------
+Left Content
+-----------------------------------*/
+
+#leftContent {
+	width: 56.511%;
+	float: left;
+	background-color: #a3a3a3;
+}
+
+#chartOptions {
+	height: 65px;
+}
+
+#dateSelector {
+	position: fixed;
+	left: 33.5%;
+	top: 70px;
+	z-index: 1;
+}
+
+#chartDisplay {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 10px 15px;
+	margin: auto;
+	width: 95%;
+	height: 400px;
+}
+
+.activityLabels {
+	font-weight: bold;
+	font-size: .8em;
+	margin-bottom: 0px;
+	color: #4569e8;
+}
+
+/* POST DATA FORM */
+
+#postData {
+	position: absolute;
+	left: 60px;
+	top: 65px;
+	float: right;
+	width: 45%;
+	background-color: #eee;
+	padding: 10px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #646464;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 3;
+}
+
+.dataFormLabel {
+	width: 40%;
+	font-size: .7em;
+	z-index: 3;
+}
+
+#dataDate, #dataCount {
+	width: 29%;
+	z-index: 3;
+}
+
+
+/*-----------------------------------
+Right Content
+-----------------------------------*/
+
+#rightContent {
+	width: 38.4155%;
+	background-color: #eeeeee;
+	float: right;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d4d4d4;
+}
+
+/* NEW ACTIVITY FORM */
+
+form.post {
+	background-color: #c4c4c4;
+	padding-bottom: 45px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a4a4a4;
+}
+
+.formLabel {
+	font-size: .85em;
+	display: inline-block;
+	width: 100%;
+	padding: 7px 0px;
+}
+
+#activityName, #activityDate, #activityType, #activityDescription {
+	width: 70%;
+	float: right;
+	height: 1.5em;
+	border: none;
+}
+
+#activityDescription {
+	height: 4em;
+}
+
+/* INDIVIDUAL ACTIVITIES */
+
+.post {
+	background-color: #e4e4e4;
+	margin: 5px 0px;
+	padding: 0px 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a4a4a4;
+}
+
+.postDate, .postType, .postDescription {
+	font-size: .7em;
+}
+
+.postName, .postDate {
+	float: left;
+}
+
+.postDate {
+	font-style: italic;
+	margin: 0 0 0 0;
+}
+
+.postName {
+	font-weight: bold;
+	font-size: .8em;
+	margin-bottom: 0px;
+}
+
+.postType {
+	float: right;
+	color: #3f3f58;
+}
+
+.postDescription, .postDate {
+	display: inline-block;
+	width: 100%;
+}
+
+
+/*-----------------------------------
+Footer
+-----------------------------------*/
+
+footer {
+	background: #ececec;
+	border-color: #4569e8;
+	padding: 5px 0 0 0;
+	width: 100%;
+	height: 35px;
+	clear: both;
+	position: fixed;
+	bottom: 0px;
+}
+
+.small-logo-footer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	text-align: center;
+}

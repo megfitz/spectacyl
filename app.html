@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href='http://fonts.googleapis.com/css?family=Advent+Pro|Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/app.css">
+		<title>Spectacyl</title>
+	</head>
+
+	<body>
+		<header>
+			<a href="index.html" class="logo">
+				<img src="img/spectacles-white.png" class="small-logo" alt="Spectacyl Logo">
+				<p class="text-logo">Spectacyl</a>
+			</a>
+
+			<nav>
+				<ul>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="wrapper">
+			<div id="leftContent">
+				<div id="chartOptions">
+					<button id="addNew">+</button>
+					<form id="postData" style="display: none;"> 
+						<span class="dataFormLabel">Date
+						<input type="date" id="dataDate"></span>
+						<span class="dataFormLabel">Count
+						<input type="text" id="dataCount"></span>
+						<button class='submitDataButton'>Submit</button>
+					</form>
+					<div id="dateSelector">
+						<span class="dataFormLabel">Start:
+						<input type="date" id="startDate"></span>
+						<span class="dataFormLabel">End:
+						<input type="date" id="endDate"></span>
+					</div>
+				</div>
+
+				<div id="chartDisplay">
+				</div>
+
+			</div>
+
+
+
+			<div id="rightContent">
+				<button class="postButton">Add Activity</button>
+				<form class="post" style="display: none;">
+					<span class="formLabel">Activity Name: 
+					<input type="text" name="activityName" id="activityName"></span>
+					<span class="formLabel">Date: 
+					<input type="date" id="activityDate"></span>
+					<span class="formLabel">Type: 
+					<select id="activityType">
+						<option value="PR">PR</option>
+						<option value="Product Update">Product Update</option>
+						<option value="Advertisement">Advertisement</option>
+					</select></span>
+					<span class="formLabel">Description: 
+					<textarea name="activityDescription" id="activityDescription"></textarea></span>
+					<br>
+					<!--<input type="submit" class='submitButton'>-->
+					<button class='submitButton'>Submit</button>
+				</form>
+
+				<div id="posts">
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<img src="img/spectacles-white.png" class="small-logo-footer" alt="Spectacyl Logo">
+		</footer>
+
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.firebase.com/js/client/1.1.3/firebase.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+    <script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+    <script src="js/flot/jquery.flot.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="js/flot/jquery.flot.symbol.js"></script>
+	<script type="text/javascript" language="javascript" src="js/flot/jquery.flot.time.js"></script>
+	<script src="js/addActivity.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="js/flot/jquery.flot.labels.js"></script>
+	<script type="text/javascript" language="javascript" src="js/flot/jquery.flot.tooltip.js"></script>
+	<script src="js/postData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/plot.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
